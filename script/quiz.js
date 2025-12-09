@@ -226,7 +226,7 @@ function loadQuestions() {
   const query = new URLSearchParams({ topic });
   if (level) query.set("level", level);
 
-  fetch(`http://localhost:3000/api/questions?${query.toString()}`)
+  fetch(`/api/questions?${query.toString()}`)
     .then(res => {
       if (!res.ok) {
         throw new Error(`HTTP ${res.status}`);

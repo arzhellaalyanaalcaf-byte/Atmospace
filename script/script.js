@@ -54,7 +54,7 @@ async function startQuiz() {
 
   try {
     const res = await fetch(
-      `http://localhost:3000/api/questions?topic=${encodeURIComponent(topic)}`
+      `/api/questions?topic=${encodeURIComponent(topic)}`
     );
 
     if (!res.ok) {

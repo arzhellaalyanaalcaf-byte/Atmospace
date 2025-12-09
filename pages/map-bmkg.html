@@ -48,18 +48,26 @@
       if (!res.ok) throw new Error("HTTP " + res.status);
       return res.json();
     })
-    .then(stations => {
-      stations
-        .filter(s => Number.isFinite(s.lat) && Number.isFinite(s.lon))
-        .forEach(s => {
-          const marker = L.marker([s.lat, s.lon]).addTo(map);
-          marker.bindPopup(`
-            <b>${s.name}</b><br>
-            <a href="https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lon}" target="_blank">
+    .then(geojson => {
+      const layer = L.geoJSON(geojson, {
+        pointToLayer: (feature, latlng) => L.marker(latlng),
+        onEachFeature: (feature, layer) => {
+          const name = feature?.properties?.name || "Stasiun BMKG";
+          const pos = layer.getLatLng();
+          const lat = pos?.lat ?? "";
+          const lon = pos?.lng ?? "";
+          layer.bindPopup(`
+            <b>${name}</b><br>
+            <a href="https://www.google.com/maps/search/?api=1&query=${lat},${lon}" target="_blank">
               Buka di Google Maps
             </a>
           `);
-        });
+        }
+      }).addTo(map);
+
+      if (layer.getLayers().length) {
+        map.fitBounds(layer.getBounds(), { padding: [24, 24] });
+      }
     })
     .catch(err => {
       console.error(err);
