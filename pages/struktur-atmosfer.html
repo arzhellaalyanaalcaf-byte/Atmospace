@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Struktur Atmosfer</title>
+  <link rel="stylesheet" href="../style/style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">MetLearn</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+</nav>
+
+<div class="stage">
+  <div class="nebula-layer"></div>
+  <div class="aurora"></div>
+
+  <header class="hero">
+    <h2 class="brand">Struktur Atmosfer</h2>
+    <p class="tag">kenali lapisan-lapisan langit kita! ☁️✨</p>
+  </header>
+
+  <main class="main">
+    <article class="material-card">
+      
+      <h2 class="about-subtitle" style="text-align: center;">
+        Yuk, kenali Selubung Pelindung Bumi! Lapisan langit yang menjaga kehidupan mulai dari troposfer hingga eksosfer 🪐
+      </h2>
+
+      <section class="folds" data-accordion>
+
+        <!-- ===================================================================================== -->
+        <!--                                        BAGIAN 1                                      -->
+        <!-- ===================================================================================== -->
+
+        <details>
+          <summary>Mengapa Atmosfer Penting?</summary>
+          <div class="fold-body">
+
+            <div class="rata-penuh" style="text-align: center;">
+              <b><p>“Atmosfer itu kayak selimut favorit kamu, kalau terlalu tipis kamu kedinginan, kalau terlalu tebal kamu kepanasan. Bedanya, ini selimut satu planet.” <br> <br></b></p>
+            </div>
+
+            <p class="rata-penuh">
+              Selain itu, atmosfer berfungsi sebagai <b>regulator suhu</b> yang menjaga bumi tetap hangat melalui proses <b>efek rumah kaca alami</b>. Gas-gas atmosfer (seperti uap air, karbon dioksida, dan metana) memerangkap sebagian panas yang dipancarkan dari permukaan bumi, mencegah suhu ekstrem antara siang dan malam, sehingga air dapat tetap berada dalam fase cair kondisi yang krusial bagi kehidupan. Atmosfer juga merupakan komponen utama dalam <b>siklus air</b> ia menahan uap air, memungkinkan pembentukan awan dan mendistribusikan air segar ke seluruh planet dalam bentuk presipitasi (hujan, salju).
+            </p>
+
+            <div class="img-center">
+              <img class="about-img img-compact" src="../img/strukturatmos.png" alt="Struktur Atmosfer">
+              <p class="about-caption">Struktur atmosfer dan perannya.</p>
+              <br>
+              <a href="https://geosains.id/penjelasan-lengkap-tentang-lapisan-atmosfer-bumi-dan-manfaatnya/" target="_blank" class="img-source">
+                Sumber gambar
+              </a>
+            </div>
+
+          </div>
+        </details>
+
+        <!-- ===================================================================================== -->
+        <!--                                        BAGIAN 2                                      -->
+        <!-- ===================================================================================== -->
+
+        <details>
+          <summary>Struktur Lapisan Atmosfer</summary>
+          <div class="fold-body">
+
+            <!-- VIDEO -->
+            <div class="video-center" style="margin-bottom: 40px;">
+              <iframe class="video-frame" 
+                  src="https://www.youtube.com/embed/tYfj68JzWUg" 
+                  title="Petualangan Miko & Milo: Mengenal Atmosfer | Video Edukasi"
+                  frameborder="100" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+              </iframe>
+              
+              <p class="about-caption" style="text-align: center;">
+                Yuk Mengenal Atmosfer
+                <br>
+                <a href="https://youtu.be/tYfj68JzWUg" target="_blank" class="img-source">Sumber video</a>
+              </p>
+            </div>
+
+            <!-- ======================= 📊 GRAFIK DIMASUKKAN DI SINI ======================= -->
+            <h3 style="margin-top:30px;text-align:center;">Grafik Suhu Rata-rata Tiap Lapisan Atmosfer</h3>
+            <p style="text-align:center;margin-bottom:10px;color:var(--muted);">
+              Perbandingan perubahan suhu dari troposfer hingga eksosfer.
+            </p>
+
+            <div style="width:90%;max-width:700px;margin:0 auto 30px auto;">
+              <canvas id="grafikAtmosfer"></canvas>
+            </div>
+            <div class="grafik-penjelasan" 
+     style="max-width:760px;margin:20px auto 30px auto;
+     background:rgba(255,255,255,0.06);
+     padding:20px;border-radius:14px;
+     border:1px solid rgba(255,255,255,0.15);color:#dceaff">
+
+  <h3 style="text-align:center;margin-bottom:10px;">📌 Interpretasi Grafik</h3>
+
+  <p style="line-height:1.6;">
+    Grafik menunjukkan pola perubahan suhu dari lapisan paling bawah hingga paling atas atmosfer.
+    Pada <b>Troposfer</b>, suhu relatif hangat karena dekat dengan permukaan bumi. 
+    Ketika naik ke <b>Stratosfer</b>, suhu sedikit turun namun kembali meningkat di bagian atas akibat adanya <b>lapisan ozon</b> yang menyerap radiasi UV.
+    Memasuki <b>Mesosfer</b>, suhu turun drastis menjadi yang <b>paling dingin</b> di antara semua lapisan.
+    Selanjutnya, suhu meningkat tajam di <b>Termosfer</b> karena energi tinggi dari radiasi matahari diserap oleh molekul terionisasi.
+    Puncaknya terjadi pada <b>Eksosfer</b>, di mana suhu dapat mencapai ribuan derajat Celcius, meski secara fisik tidak terasa panas karena sangat sedikit partikel udara.
+  </p>
+
+  <p style="margin-top:12px;line-height:1.6;">
+    <b>Kesimpulan:</b> Grafik memperlihatkan bahwa perubahan suhu atmosfer <b>tidak linear</b>, 
+    tetapi mengikuti mekanisme fisika unik di setiap lapisan, 
+    mulai dari pemanasan dekat bumi, pendinginan ekstrem, hingga pemanasan kembali akibat interaksi radiasi matahari.
+  </p>
+</div>
+
+            <!-- ======================= END GRAFIK ========================================= -->
+
+            <!-- ======================= SEMUA MATERI ASLI ======================= -->
+
+            <div class="fold-body">
+              <div class="mini-card">
+                <div class="rata-penuh">
+                  <h4>Troposfer (0–12 km)</h4>
+                  <p>Troposfer adalah lapisan atmosfer terbawah dari permukaan tanah. Di sinilah manusia, tumbuhan, dan hewan hidup. Pada lapisan troposfer, manusia dan makhluk hidup lainnya masih mungkin bernapas. Namun, semakin ke atas dan mendekati batas troposfer, manusia mungkin akan lebih sulit bernapas dan mengalami keringat dingin hingga hipotermia. Ketebalan lapisan troposfer mencapai 12 kilometer dari permukaan Bumi. Fungsinya adalah untuk menjaga kestabilan udara di permukaan Bumi. Troposfer terbentuk dari dua senyawa kimia, yakni karbondioksida dan uap air.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="fold-body">
+              <div class="mini-card">
+                <div class="rata-penuh">
+                  <h4>Stratosfer (12–50 km)</h4>
+                  <p>Stratosfer adalah lapisan kedua atmosfer yang bersuhu dingin dan hanya mengandung ozon. Lapisan inilah yang memiliki fungsi utama untuk melindungi permukaan Bumi dari gelombang sinar ultraviolet yang membahayakan makhluk hidup. Stratosfer diketahui memiliki ketebalan antara 12-50 kilometer dari permukaan Bumi. Lapisan ozon sendiri dalam stratosfer berjarak 35 kilometer dari permukaan Bumi. Sinar matahari yang masuk ke dalam atmosfer biasanya diserap pada lapisan stratosfer.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="fold-body">
+              <div class="mini-card">
+                <div class="rata-penuh">
+                  <h4>Mesosfer (50–75 km)</h4>
+                  <p>Mesosfer adalah lapisan ketiga atmosfer di mana terjadi penurunan suhu yang sangat signifikan pada setiap ketinggian. Mesosfer berada pada ketinggian 50-75 kilometer dari permukaan Bumi. Suhu pada lapisan ini sendiri berkurang 0,4 derajat Celcius setiap 100 meter ketinggiannya. Pada lapisan terendah, mesosfer berada pada suhu 10 derajat Celcius. Sementara pada lapisan tertinggi, suhunya bisa mencapai -120 derajat Celcius. <br><br>
+                  Namun, justru pada suhu rendah itulah terjadi "pembakaran" setiap benda-benda angkasa yang masuk ke Bumi. Ya, mesosfer memiliki salah satu fungsi utama melindungi Bumi dari masuknya benda-benda langit yang tertarik gravitasi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="fold-body">
+              <div class="mini-card">
+                <div class="rata-penuh">
+                  <h4>Termosfer (80–800 km)</h4>
+                  <p>Termosfer adalah lapisan keempat atmosfer di mana terjadi ionisasi partikel atau molekul. Proses ionisasi mengakibatkan munculnya reaksi perubahan jumlah elektron yang bisa menghasilkan cahaya warna-warni yang indah. Pernah tahu soal Aurora, cahaya menyerupai tirai yang sering muncul di Kutub Utara? Nah, Aurora terjadi pada lapisan termosfer. <br><br>
+
+                  Posisi lapisan termosfer berada pada ketinggian 80-100 kilometer di atas permukaan Bumi. Bahkan jika dilihat dari sub lapisannya, ketinggian termosfer bisa mencapai 800 kilometer. Bertolak belakang dengan mesosfer, termosfer memiliki suhu yang amat panas. Yakni antara 40 hingga 1232 derajat Celcius. Lapisan ini juga mengandung muatan listrik sebagai hasil dari proses ionisasi yang terjadi. Ionisasi tersebut juga memberikan efek terhadap perambatan atau pemantulan gelombang dengan frekuensi rendah dan tinggi. Karenanya, lapisan ini kerap dimanfaatkan untuk keperluan penyiaran radio dan televisi. </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="fold-body">
+              <div class="mini-card">
+                <div class="rata-penuh">
+                  <h4>Eksosfer (>800 km)</h4>
+                  <p>Eksosfer adalah lapisan kelima sekaligus terakhir dari atmosfer. Eksosfer berada pada lapisan terluar dengan jarak 800-3260 kilometer dari permukaan Bumi. Interaksi gas antara Bumi dengan luar angkasa terjadi pada lapisan ini. Karena jaraknya terbilang jauh dari permukaan Bumi, gaya gravitasi sangat rendah dan hampir tidak terasa di lapisan terakhir atmosfer. Hal inilah yang menyebabkan interaksi gas luar angkasa bisa terjadi pada eksosfer. <br><br>
+
+                  Suhu pada eksosfer bisa mencapai 2.200 derajat Celcius. Eksosfer memiliki unsur hidrogen yang sangat sedikit sehingga kerap memunculkan cahaya zodiakal atau gegenscherin. Lapisan ini juga dikenal dengan nama lapisan ruang antarplanet dan geostasioner. Sebelum mencapai mesosfer, biasanya benda-benda langit yang tertarik ke Bumi paling banyak hancur pada bagian ini. </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </details>
+
+        <!-- ===================================================================================== -->
+        <!--                                        BAGIAN 3                                      -->
+        <!-- ===================================================================================== -->
+
+        <details>
+          <summary>Kesimpulan</summary>
+          <div class="fold-body">
+            <p>Setiap lapisan punya peran: troposfer untuk cuaca, stratosfer untuk proteksi UV, mesosfer memecah meteor, termosfer memantulkan radio & memunculkan aurora, eksosfer sebagai gerbang luar angkasa.</p>
+          </div>
+        </details>
+
+        <!-- ===================================================================================== -->
+        <!--                                        BAGIAN 4                                      -->
+        <!-- ===================================================================================== -->
+
+        <details>
+          <summary>Mulai Kuis</summary>
+          <div class="fold-body">
+            <p>Siap menebak lapisan mana yang melakukan apa? Soal dan urutannya diacak setiap kali.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="quiz.html?topic=struktur">Mulai Kuis</a>
+              <a class="btn secondary" href="material.html">Kembali ke Materi</a>
+            </div>
+          </div>
+        </details>
+
+      </section>
+    </article>
+  </main>
+</div>
+
+<script src="../script/page.js"></script>
+
+<!-- =================================== SCRIPT CHART =================================== -->
+<script>
+const ctx = document.getElementById('grafikAtmosfer');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Troposfer', 'Stratosfer', 'Mesosfer', 'Termosfer', 'Eksosfer'],
+    datasets: [{
+      label: 'Suhu Rata-rata (°C)',
+      data: [15, -3, -90, 400, 1200],
+      borderWidth: 3,
+      borderColor: 'rgba(52, 183, 255, 1)',
+      backgroundColor: 'rgba(52, 183, 255, 0.25)',
+      pointBorderColor: 'rgba(255,255,255,1)',
+      pointBackgroundColor: 'rgba(52, 183, 255, 1)',
+      pointRadius: 6,
+      tension: 0.35
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { 
+        display: true,
+        labels: { color: "#fff" }
+      }
+    },
+    scales: {
+      x: { 
+        ticks: { color: "#e0e8ff" },
+        grid: { color: "rgba(255,255,255,0.05)" }
+      },
+      y: { 
+        ticks: { color: "#e0e8ff" },
+        grid: { color: "rgba(255,255,255,0.05)" }
+      }
+    }
+  }
+});
+</script>
